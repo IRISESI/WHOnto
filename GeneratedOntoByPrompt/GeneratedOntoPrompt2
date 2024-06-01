@@ -1,0 +1,86 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix whc: <http://example.org/WorldHeritageConvention#> .
+
+# Define the ontology
+whc:WorldHeritageOntology rdf:type owl:Ontology ;
+    rdfs:comment "Ontology representing World Heritage according to the UNESCO's World Heritage Convention" .
+
+# Define classes
+whc:CulturalHeritage rdf:type owl:Class ;
+    rdfs:label "Cultural Heritage" ;
+    rdfs:comment "Artifacts, structures, and sites of cultural significance as defined by the World Heritage Convention" .
+
+whc:Monument rdf:type owl:Class ;
+    rdfs:label "Monument" ;
+    rdfs:comment "Architectural works, monumental sculptures and paintings, archaeological elements or structures, inscriptions, cave dwellings, or combinations thereof, with Outstanding Universal Value" ;
+    rdfs:subClassOf whc:CulturalHeritage .
+
+whc:GroupOfBuildings rdf:type owl:Class ;
+    rdfs:label "Group of Buildings" ;
+    rdfs:comment "Groups of separate or connected buildings with Outstanding Universal Value due to their architecture, homogeneity, or location" ;
+    rdfs:subClassOf whc:CulturalHeritage .
+
+whc:Site rdf:type owl:Class ;
+    rdfs:label "Site" ;
+    rdfs:comment "Works of man or the combined works of nature and man, including archaeological sites, with Outstanding Universal Value from historical, aesthetic, ethnological, or anthropological perspectives" ;
+    rdfs:subClassOf whc:CulturalHeritage .
+
+whc:NaturalHeritage rdf:type owl:Class ;
+    rdfs:label "Natural Heritage" ;
+    rdfs:comment "Natural features, geological formations, physiographical formations, habitats of threatened species, or natural sites of Outstanding Universal Value" .
+
+whc:NaturalFeature rdf:type owl:Class ;
+    rdfs:label "Natural Feature" ;
+    rdfs:comment "Physical and biological formations or groups of such formations with Outstanding Universal Value from an aesthetic or scientific perspective" ;
+    rdfs:subClassOf whc:NaturalHeritage .
+
+whc:GeologicalAndPhysiographicalFormation rdf:type owl:Class ;
+    rdfs:label "Geological and Physiographical Formation" ;
+    rdfs:comment "Geological formations or precisely delineated areas constituting habitats of threatened species, with Outstanding Universal Value from a scientific or conservation perspective" ;
+    rdfs:subClassOf whc:NaturalHeritage .
+
+whc:NaturalSite rdf:type owl:Class ;
+    rdfs:label "Natural Site" ;
+    rdfs:comment "Precisely delineated natural areas of Outstanding Universal Value from a scientific, conservation, or natural beauty perspective" ;
+    rdfs:subClassOf whc:NaturalHeritage .
+
+whc:MixedHeritage rdf:type owl:Class ;
+    rdfs:label "Mixed Cultural and Natural Heritage" ;
+    rdfs:comment "Properties satisfying definitions of both cultural and natural heritage" .
+
+whc:CulturalLandscape rdf:type owl:Class ;
+    rdfs:label "Cultural Landscape" ;
+    rdfs:comment "Landscapes representing the interaction between humankind and the natural environment" .
+
+whc:ClearlyDefinedLandscape rdf:type owl:Class ;
+    rdfs:label "Clearly Defined Landscape" ;
+    rdfs:comment "Landscapes designed and created intentionally by people, often associated with aesthetic or religious reasons" ;
+    rdfs:subClassOf whc:CulturalLandscape .
+
+whc:OrganicallyEvolvedLandscape rdf:type owl:Class ;
+    rdfs:label "Organically Evolved Landscape" ;
+    rdfs:comment "Landscapes resulting from initial social, economic, or religious imperatives and developed in response to the natural environment" ;
+    rdfs:subClassOf whc:CulturalLandscape .
+
+whc:AssociativeCulturalLandscape rdf:type owl:Class ;
+    rdfs:label "Associative Cultural Landscape" ;
+    rdfs:comment "Landscapes recognized for their powerful cultural associations with the natural environment" ;
+    rdfs:subClassOf whc:CulturalLandscape .
+
+# Establish hierarchy
+whc:Monument rdfs:subClassOf whc:CulturalHeritage .
+whc:GroupOfBuildings rdfs:subClassOf whc:CulturalHeritage .
+whc:Site rdfs:subClassOf whc:CulturalHeritage .
+
+whc:NaturalFeature rdfs:subClassOf whc:NaturalHeritage .
+whc:GeologicalAndPhysiographicalFormation rdfs:subClassOf whc:NaturalHeritage .
+whc:NaturalSite rdfs:subClassOf whc:NaturalHeritage .
+
+whc:ClearlyDefinedLandscape rdfs:subClassOf whc:CulturalLandscape .
+whc:OrganicallyEvolvedLandscape rdfs:subClassOf whc:CulturalLandscape .
+whc:AssociativeCulturalLandscape rdfs:subClassOf whc:CulturalLandscape .
+
+whc:MixedHeritage rdf:subClassOf whc:CulturalHeritage .
+whc:MixedHeritage rdf:subClassOf whc:NaturalHeritage .
