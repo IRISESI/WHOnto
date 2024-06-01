@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix whc: <http://example.org/WorldHeritageConvention#> .
+
+# Define the ontology
+whc:WorldHeritageOntology rdf:type owl:Ontology ;
+    rdfs:comment "Ontology representing World Heritage according to the UNESCO's World Heritage Convention" .
+
+# Define classes
+whc:CulturalHeritage rdf:type owl:Class ;
+    rdfs:label "Cultural Heritage" ;
+    rdfs:comment "Artifacts, structures, and sites of cultural significance as defined by the World Heritage Convention" .
+
+whc:NaturalHeritage rdf:type owl:Class ;
+    rdfs:label "Natural Heritage" ;
+    rdfs:comment "Natural features, geological formations, physiographical formations, habitats of threatened species, or natural sites of Outstanding Universal Value" .
+
+whc:MixedHeritage rdf:type owl:Class ;
+    rdfs:label "Mixed Cultural and Natural Heritage" ;
+    rdfs:comment "Properties satisfying definitions of both cultural and natural heritage" .
+
+whc:CulturalLandscape a owl:Class ;
+    rdfs:label "Cultural Landscape" ;
+    rdfs:comment "Represents cultural landscapes inscribed on the World Heritage List, illustrative of the evolution of human society and settlement over time, under the influence of the physical constraints and/or opportunities presented by their natural environment and of successive social, economic and cultural forces, both external and internal."@en ;
+    rdfs:subClassOf whc:CulturalHeritage .
+	
+whc:ClearlyDefinedLandscape rdf:type owl:Class ;
+    rdfs:label "Clearly Defined Landscape" ;
+    rdfs:comment "Landscapes designed and created intentionally by people, often associated with aesthetic or religious reasons" ;
+    rdfs:subClassOf whc:CulturalLandscape .
+
+whc:OrganicallyEvolvedLandscape rdf:type owl:Class ;
+    rdfs:label "Organically Evolved Landscape" ;
+    rdfs:comment "Landscapes resulting from initial social, economic, or religious imperatives and developed in response to the natural environment" ;
+    rdfs:subClassOf whc:CulturalLandscape .
+
+whc:AssociativeCulturalLandscape rdf:type owl:Class ;
+    rdfs:label "Associative Cultural Landscape" ;
+    rdfs:comment "Landscapes recognized for their powerful cultural associations with the natural environment" ;
+    rdfs:subClassOf whc:CulturalLandscape .
