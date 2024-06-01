@@ -1,0 +1,105 @@
+@prefix : <http://example.org/WorldHeritageConvention#WorldHeritageOntology> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix whc: <http://example.org/WorldHeritageConvention#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/WorldHeritageConvention#WorldHeritageOntology> .
+
+<http://example.org/WorldHeritageConvention#WorldHeritageOntology> rdf:type owl:Ontology ;
+                                                                    rdfs:comment "Ontology representing World Heritage according to the UNESCO's World Heritage Convention" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/WorldHeritageConvention#AssociativeCulturalLandscape
+whc:AssociativeCulturalLandscape rdf:type owl:Class ;
+                                 rdfs:subClassOf whc:CulturalLandscape ;
+                                 rdfs:comment "Landscapes recognized for their powerful cultural associations with the natural environment" ;
+                                 rdfs:label "Associative Cultural Landscape" .
+
+
+###  http://example.org/WorldHeritageConvention#ClearlyDefinedLandscape
+whc:ClearlyDefinedLandscape rdf:type owl:Class ;
+                            rdfs:subClassOf whc:CulturalLandscape ;
+                            rdfs:comment "Landscapes designed and created intentionally by people, often associated with aesthetic or religious reasons" ;
+                            rdfs:label "Clearly Defined Landscape" .
+
+
+###  http://example.org/WorldHeritageConvention#CulturalHeritage
+whc:CulturalHeritage rdf:type owl:Class ;
+                     rdfs:comment "Artifacts, structures, and sites of cultural significance as defined by the World Heritage Convention" ;
+                     rdfs:label "Cultural Heritage" .
+
+
+###  http://example.org/WorldHeritageConvention#CulturalLandscape
+whc:CulturalLandscape rdf:type owl:Class ;
+                      rdfs:subClassOf whc:CulturalHeritage ;
+                      rdfs:comment "Landscapes representing the interaction between humankind and the natural environment" ;
+                      rdfs:label "Cultural Landscape" .
+
+
+###  http://example.org/WorldHeritageConvention#GeologicalAndPhysiographicalFormation
+whc:GeologicalAndPhysiographicalFormation rdf:type owl:Class ;
+                                          rdfs:subClassOf whc:NaturalHeritage ;
+                                          rdfs:comment "Geological formations or precisely delineated areas constituting habitats of threatened species, with Outstanding Universal Value from a scientific or conservation perspective" ;
+                                          rdfs:label "Geological and Physiographical Formation" .
+
+
+###  http://example.org/WorldHeritageConvention#GroupOfBuildings
+whc:GroupOfBuildings rdf:type owl:Class ;
+                     rdfs:subClassOf whc:CulturalHeritage ;
+                     rdfs:comment "Groups of separate or connected buildings with Outstanding Universal Value due to their architecture, homogeneity, or location" ;
+                     rdfs:label "Group of Buildings" .
+
+
+###  http://example.org/WorldHeritageConvention#MixedHeritage
+whc:MixedHeritage rdf:type owl:Class ;
+                  rdfs:comment "Properties satisfying definitions of both cultural and natural heritage" ;
+                  rdfs:label "Mixed Cultural and Natural Heritage" .
+
+
+###  http://example.org/WorldHeritageConvention#Monument
+whc:Monument rdf:type owl:Class ;
+             rdfs:subClassOf whc:CulturalHeritage ;
+             rdfs:comment "Architectural works, monumental sculptures and paintings, archaeological elements or structures, inscriptions, cave dwellings, or combinations thereof, with Outstanding Universal Value" ;
+             rdfs:label "Monument" .
+
+
+###  http://example.org/WorldHeritageConvention#NaturalFeature
+whc:NaturalFeature rdf:type owl:Class ;
+                   rdfs:subClassOf whc:NaturalHeritage ;
+                   rdfs:comment "Physical and biological formations or groups of such formations with Outstanding Universal Value from an aesthetic or scientific perspective" ;
+                   rdfs:label "Natural Feature" .
+
+
+###  http://example.org/WorldHeritageConvention#NaturalHeritage
+whc:NaturalHeritage rdf:type owl:Class ;
+                    rdfs:comment "Natural features, geological formations, physiographical formations, habitats of threatened species, or natural sites of Outstanding Universal Value" ;
+                    rdfs:label "Natural Heritage" .
+
+
+###  http://example.org/WorldHeritageConvention#NaturalSite
+whc:NaturalSite rdf:type owl:Class ;
+                rdfs:subClassOf whc:NaturalHeritage ;
+                rdfs:comment "Precisely delineated natural areas of Outstanding Universal Value from a scientific, conservation, or natural beauty perspective" ;
+                rdfs:label "Natural Site" .
+
+
+###  http://example.org/WorldHeritageConvention#OrganicallyEvolvedLandscape
+whc:OrganicallyEvolvedLandscape rdf:type owl:Class ;
+                                rdfs:subClassOf whc:CulturalLandscape ;
+                                rdfs:comment "Landscapes resulting from initial social, economic, or religious imperatives and developed in response to the natural environment" ;
+                                rdfs:label "Organically Evolved Landscape" .
+
+
+###  http://example.org/WorldHeritageConvention#Site
+whc:Site rdf:type owl:Class ;
+         rdfs:subClassOf whc:CulturalHeritage ;
+         rdfs:comment "Works of man or the combined works of nature and man, including archaeological sites, with Outstanding Universal Value from historical, aesthetic, ethnological, or anthropological perspectives" ;
+         rdfs:label "Site" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
