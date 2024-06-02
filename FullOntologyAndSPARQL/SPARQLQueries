@@ -6,8 +6,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX whc: <http://example.org/WorldHeritageConvention#>
 
 #CQ1-CQ4
-
-#CQ8-CQ10
+#CQ1
+SELECT ?definition
+WHERE {
+  ?culturalHeritage rdf:type whc:CulturalHeritage .
+  ?culturalHeritage rdfs:comment ?definition .}
+#CQ2
+SELECT ?definition
+WHERE {
+  ?culturalLandscape rdf:type whc:CulturalLandscape .
+  ?culturalLandscape rdfs:comment ?definition .}
+#CQ3
+SELECT ?definition
+WHERE {
+  ?groupOfBuildings rdf:type whc:GroupOfBuildings .
+  ?groupOfBuildings rdfs:comment ?definition .}
+#CQ4
+SELECT ?definition
+WHERE {
+  ?formation rdf:type whc:GeologicalAndPhysiographicalFormation .
+  ?formation rdfs:comment ?definition .}
+########CQ8-CQ10#################################################
 #CQ8--As no Natural feature property is defined in the ontology, we propose to remplace whc:NaturalFeature by whc:NaturalSite
 
 SELECT ?naturalFeatureLabel
@@ -15,11 +34,48 @@ WHERE {
   ?naturalFeature rdf:type whc:NaturalFeature ;
                   rdfs:label ?naturalFeatureLabel .
 }
-
-
+#CQ9
+SELECT ?monumentLabel
+WHERE {
+  ?monument rdf:type whc:Monument ;
+            rdfs:label ?monumentLabel .
+}
+#CQ10
+SELECT ?landscapeLabel
+WHERE {
+  ?landscape rdf:type whc:ClearlyDefinedLandscape ;
+             rdfs:label ?landscapeLabel .
+}
 #CQ5
 
+SELECT ?landscapeType ?comment
+WHERE {
+  VALUES ?landscapeType { whc:ClearlyDefinedLandscape whc:OrganicallyEvolvedLandscape whc:AssociativeCulturalLandscape }
+  ?landscapeType rdfs:label ?label .
+  OPTIONAL { ?landscapeType rdfs:comment ?comment }
+}
 
 #CQ6
+SELECT ?culturalSiteLabel ?naturalSiteLabel
+WHERE {
+  ?culturalSite rdf:type whc:CulturalHeritage ;
+                rdfs:label ?culturalSiteLabel .
+  ?naturalSite rdf:type whc:NaturalHeritage ;
+               rdfs:label ?naturalSiteLabel .
+}
 
-#CQ7
+#CQ7----CatGPT comment: To distinguish mixed cultural and natural heritage properties from purely cultural or natural heritage sites, 
+#we need to identify instances of whc:MixedHeritage that do not belong exclusively
+#to either whc:CulturalHeritage or whc:NaturalHeritage. Here's the SPARQL query:
+SELECT ?mixedHeritageLabel
+WHERE {
+  ?mixedHeritage rdf:type whc:MixedHeritage ;
+                 rdfs:label ?mixedHeritageLabel .
+  
+  FILTER NOT EXISTS {
+    ?mixedHeritage rdf:type whc:CulturalHeritage .
+  }
+  FILTER NOT EXISTS {
+    ?mixedHeritage rdf:type whc:NaturalHeritage .
+  }
+}
