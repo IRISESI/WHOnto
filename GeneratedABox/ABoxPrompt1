@@ -1,1 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix whc: <http://example.org/WorldHeritageConvention#> .
+@prefix ex: <http://example.org/properties#> .
 
+# Instances
+whc:TajMahal rdf:type whc:Monument ;
+    rdfs:label "Taj Mahal" .
+
+whc:HistoricCentreOfFlorence rdf:type whc:GroupOfBuildings ;
+    rdfs:label "Historic Centre of Florence" .
+
+whc:HistoricCityOfToledo rdf:type whc:Site ;
+    rdfs:label "Historic City of Toledo" .
+
+whc:GreatBarrierReef rdf:type whc:NaturalSite ;
+    rdfs:label "Great Barrier Reef" .
+
+whc:SerengetiNationalPark rdf:type whc:NaturalSite ;
+    rdfs:label "Serengeti National Park" .
+
+whc:GrandCanyonNationalPark rdf:type whc:NaturalSite ;
+    rdfs:label "Grand Canyon National Park" .
+
+whc:MachuPicchu rdf:type whc:MixedHeritage ;
+    rdfs:label "Machu Picchu" .
+
+whc:MountTaishan rdf:type whc:MixedHeritage ;
+    rdfs:label "Mount Taishan" .
+
+whc:MeteoraRock rdf:type whc:MixedHeritage ;
+    rdfs:label "Meteora Rock" .
+
+# Relationships
+whc:TajMahal rdf:type whc:CulturalHeritage .
+whc:HistoricCentreOfFlorence rdf:type whc:CulturalHeritage .
+whc:HistoricCityOfToledo rdf:type whc:CulturalHeritage .
+
+whc:GreatBarrierReef rdf:type whc:NaturalHeritage .
+whc:SerengetiNationalPark rdf:type whc:NaturalHeritage .
+whc:GrandCanyonNationalPark rdf:type whc:NaturalHeritage .
+
+whc:MachuPicchu rdf:type whc:CulturalHeritage .
+whc:MountTaishan rdf:type whc:CulturalHeritage .
+whc:MeteoraRock rdf:type whc:CulturalHeritage .
+whc:MachuPicchu rdf:type whc:NaturalHeritage .
+whc:MountTaishan rdf:type whc:NaturalHeritage .
+whc:MeteoraRock rdf:type whc:NaturalHeritage .
