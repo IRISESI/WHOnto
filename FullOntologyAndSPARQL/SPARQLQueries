@@ -7,7 +7,7 @@ PREFIX whc: <http://example.org/WorldHeritageConvention#>
 
 #CQ1-CQ4
 
-
+#CQ8-CQ10
 #CQ8--As no Natural feature property is defined in the ontology, we propose to remplace whc:NaturalFeature by whc:NaturalSite
 
 SELECT ?naturalFeatureLabel
@@ -15,3 +15,11 @@ WHERE {
   ?naturalFeature rdf:type whc:NaturalFeature ;
                   rdfs:label ?naturalFeatureLabel .
 }
+
+
+#CQ5
+
+
+#CQ6
+
+#CQ7
