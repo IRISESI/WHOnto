@@ -1,3 +1,8 @@
+###  This is the version saved automatically through Protégé. It results from opening the TBoxPrompt2Corrected in Protégé, then importing 
+###  the ABoxPrompt2 into the active ontology. 
+### This allows the reader to use the full ontology (TBox and ABox) without having to perform these operations.
+
+
 @prefix : <http://example.org/WorldHeritageConvention#WorldHeritageOntology> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
