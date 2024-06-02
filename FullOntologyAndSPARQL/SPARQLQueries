@@ -55,7 +55,13 @@ WHERE {
   OPTIONAL { ?landscapeType rdfs:comment ?comment }
 }
 
-#CQ6
+#CQ6---ChatGPT comment: CQ6To distinguish cultural heritage sites from natural heritage sites within
+#the classification system, we can focus on the properties that uniquely characterize each type of heritage. 
+#In this ontology, cultural heritage sites are represented by instances of the classes whc:CulturalHeritage,
+#whc:Monument, whc:GroupOfBuildings, and whc:Site, while natural heritage sites are represented by instances 
+#of the classes whc:NaturalHeritage, whc:NaturalFeature,
+#whc:GeologicalAndPhysiographicalFormation, and whc:NaturalSite.
+
 SELECT ?culturalSiteLabel ?naturalSiteLabel
 WHERE {
   ?culturalSite rdf:type whc:CulturalHeritage ;
@@ -64,7 +70,7 @@ WHERE {
                rdfs:label ?naturalSiteLabel .
 }
 
-#CQ7----CatGPT comment: To distinguish mixed cultural and natural heritage properties from purely cultural or natural heritage sites, 
+#CQ7----ChatGPT comment: To distinguish mixed cultural and natural heritage properties from purely cultural or natural heritage sites, 
 #we need to identify instances of whc:MixedHeritage that do not belong exclusively
 #to either whc:CulturalHeritage or whc:NaturalHeritage. Here's the SPARQL query:
 SELECT ?mixedHeritageLabel
