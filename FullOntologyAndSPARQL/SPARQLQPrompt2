@@ -1,0 +1,44 @@
+
+#CQ2
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT ?definition
+WHERE {  whc:CulturalLandscape rdfs:comment ?definition .}
+
+#CQ3
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT ?definition
+WHERE {  whc:GroupOfBuildings rdfs:comment ?definition .}
+
+#CQ4
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT ?classification
+WHERE {  
+  ?formation rdf:type whc:GeologicalAndPhysiographicalFormation .
+  ?formation rdfs:subClassOf ?classification .
+  FILTER (?classification = whc:NaturalHeritage)
+}
+Message from ChatGPT: "This query retrieves the classification of geological and physiographical formations within the natural heritage category. 
+It first finds instances of geological and physiographical formations 
+and then checks their superclass to ensure they are classified within the natural heritage category"
+
+#CQ5
+
+#CQ6
+
+#CQ7
+
+#CQ8
+
+
+#CQ9
+
+#CQ10
