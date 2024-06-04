@@ -1,0 +1,17 @@
+Prompt 1 # Zero-shot learning
+I will provide you with an OWL ontology. Your task is to transform a given competency question expressed in natural language into a SPARQL query
+using only the classes and properties of the provided ontology. 
+
+The competency question: ""
+
+The OWL ontology:""
+
+Prompt 2 # one-shot learning
+
+I will provide you with an OWL ontology. Your task is to transform a given Competency Question (CQ) expressed in natural language into a SPARQL query
+using only the classes and properties of the provided ontology. You will be guided by an example.
+The OWL ontology:""
+Example: 
+The competency question: ""
+The SPARQL query: ""
+
