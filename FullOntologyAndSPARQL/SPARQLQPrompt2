@@ -31,14 +31,111 @@ It first finds instances of geological and physiographical formations
 and then checks their superclass to ensure they are classified within the natural heritage category"
 
 #CQ5
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT ?landscapeType ?description
+WHERE {
+  ?landscapeType rdf:type owl:Class ;
+                 rdfs:subClassOf whc:CulturalLandscape ;
+                 rdfs:comment ?description .
+}
+Message from ChatGPT: "This query selects subclasses of CulturalLandscape, retrieves their labels, and their corresponding 
+descriptions. It doesn't specifically filter for the three main types, assuming the ontology defines only three subclasses. 
+If there are more than three subclasses and you need only the three main types, further refinement of the query would be necessary, 
+possibly using additional properties or patterns specific to the main types."
 
 #CQ6
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT DISTINCT ?culturalSite ?naturalSite
+WHERE {
+  ?culturalSite rdf:type whc:CulturalHeritage .
+  ?naturalSite rdf:type whc:NaturalHeritage .
+  FILTER NOT EXISTS { ?culturalSite rdf:type whc:NaturalHeritage }
+  FILTER NOT EXISTS { ?naturalSite rdf:type whc:CulturalHeritage }
+}
+(several tests have been undertaken)
+ChatGPT message: "This SPARQL query retrieves pairs of cultural heritage sites and natural heritage sites.
+It ensures that each site is uniquely classified either as cultural heritage or natural heritage by filtering out instances that belong to both categories.
+The query uses the classes defined in the ontology to distinguish between cultural heritage and natural heritage sites within the classification system.
 
 #CQ7
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT DISTINCT ?mixedHeritage ?culturalHeritage ?naturalHeritage
+WHERE {
+  ?mixedHeritage rdf:type whc:MixedHeritage .
+  ?culturalHeritage rdf:type whc:CulturalHeritage .
+  ?naturalHeritage rdf:type whc:NaturalHeritage .
+  FILTER NOT EXISTS { ?mixedHeritage rdf:type ?type .
+                      FILTER (?type = whc:CulturalHeritage || ?type = whc:NaturalHeritage)
+                    }
+}
+ChatGPT message:"This SPARQL query retrieves distinct instances (?mixedHeritage) of mixed cultural and natural heritage, purely cultural heritage (?culturalHeritage), and purely natural heritage (?naturalHeritage).
+It ensures that the ?mixedHeritage instance does not belong to either purely cultural or purely natural heritage classes, thus distinguishing it as mixed heritage.
+The query utilizes the classes defined in the ontology to distinguish between mixed cultural and natural heritage properties and purely cultural or natural heritage sites within the classification system."
+
+Another obtained version:
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT DISTINCT ?property
+WHERE {
+  {
+    ?mixedHeritage rdf:type whc:MixedHeritage .
+    ?property rdfs:subClassOf ?mixedHeritage .
+    FILTER NOT EXISTS { ?property rdf:type whc:CulturalHeritage }
+  }
+  UNION
+  {
+    ?mixedHeritage rdf:type whc:MixedHeritage .
+    ?property rdfs:subClassOf ?mixedHeritage .
+    FILTER NOT EXISTS { ?property rdf:type whc:NaturalHeritage }
+  }
+}
+ChatGPT message: "This query retrieves properties that distinguish mixed cultural and natural heritage properties from purely cultural or natural heritage sites within the provided ontology. It does so by finding subclasses of MixedHeritage that are not also subclasses of either CulturalHeritage or NaturalHeritage"
 
 #CQ8
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
 
+SELECT ?naturalFeature
+WHERE {
+  ?naturalFeature rdf:type whc:NaturalFeature .
+}
 
+ChatGPT message: "This SPARQL query selects instances that are of type whc:NaturalFeature, which are the natural
+features considered as natural heritage according to the Convention."
 #CQ9
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT ?monument
+WHERE {
+  ?monument rdf:type whc:Monument .
+}
+
+ChatGPT message: "This SPARQL query selects instances that are of type whc:Monument, which are monuments considered as cultural heritage under the Convention."
+
 
 #CQ10
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT ?landscape
+WHERE {
+  ?landscape rdf:type whc:ClearlyDefinedLandscape .
+}
+
+ChatGPT message: "This SPARQL query selects instances that are of type whc:ClearlyDefinedLandscape, which are clearly defined landscapes designed and created intentionally by people."
