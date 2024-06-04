@@ -11,7 +11,15 @@ Prompt 2 # one-shot learning
 I will provide you with an OWL ontology. Your task is to transform a given Competency Question (CQ) expressed in natural language into a SPARQL query
 using only the classes and properties of the provided ontology. You will be guided by an example.
 The OWL ontology:""
-Example: 
-The competency question: ""
-The SPARQL query: ""
+
+The competency question example: "What is the definition of cultural heritage according to Article 1 of the World Heritage Convention?"
+The corresponding SPARQL query: "
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT ?definition
+WHERE {  whc:CulturalHeritage rdfs:comment ?definition .}"
+
+The competency question to translate: ""
 
