@@ -1,6 +1,6 @@
 ###  This is the version saved automatically through Protégé. It results from opening the TBoxPrompt2Corrected in Protégé, then importing 
 ###  the ABoxPrompt2 into the active ontology. 
-### This allows the reader to use the full ontology (TBox and ABox) without having to perform these operations.
+### This allows the reader to use the full ontology (TBox and ABox) without having to perform these operations personally.
 
 
 @prefix : <http://example.org/WorldHeritageConvention#WorldHeritageOntology> .
