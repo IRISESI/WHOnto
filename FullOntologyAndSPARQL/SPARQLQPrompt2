@@ -1,32 +1,20 @@
-#CQ1
+# Please include these prefixes before each query
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX whc: <http://example.org/WorldHeritageConvention#>
-
+#CQ1
 SELECT ?definition
 WHERE {  whc:CulturalHeritage rdfs:comment ?definition .}
 
 #CQ2
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
-
 SELECT ?definition
 WHERE {  whc:CulturalLandscape rdfs:comment ?definition .}
 
 #CQ3
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
-
 SELECT ?definition
 WHERE {  whc:GroupOfBuildings rdfs:comment ?definition .}
 
 #CQ4
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
-
 SELECT ?classification
 WHERE {  
   ?formation rdf:type whc:GeologicalAndPhysiographicalFormation .
@@ -38,10 +26,6 @@ It first finds instances of geological and physiographical formations
 and then checks their superclass to ensure they are classified within the natural heritage category"
 
 #CQ4
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
-
 SELECT ?landscapeType ?description
 WHERE {
   ?landscapeType rdf:type owl:Class ;
@@ -54,10 +38,6 @@ If there are more than three subclasses and you need only the three main types, 
 possibly using additional properties or patterns specific to the main types."
 
 #CQ5
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
-
 SELECT DISTINCT ?culturalSite ?naturalSite
 WHERE {
   ?culturalSite rdf:type whc:CulturalHeritage .
@@ -71,10 +51,6 @@ It ensures that each site is uniquely classified either as cultural heritage or 
 The query uses the classes defined in the ontology to distinguish between cultural heritage and natural heritage sites within the classification system.
 
 #CQ7
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
-
 SELECT DISTINCT ?mixedHeritage ?culturalHeritage ?naturalHeritage
 WHERE {
   ?mixedHeritage rdf:type whc:MixedHeritage .
@@ -89,10 +65,6 @@ It ensures that the ?mixedHeritage instance does not belong to either purely cul
 The query utilizes the classes defined in the ontology to distinguish between mixed cultural and natural heritage properties and purely cultural or natural heritage sites within the classification system."
 
 Another obtained version:
-
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
 
 SELECT DISTINCT ?property
 WHERE {
@@ -111,9 +83,6 @@ WHERE {
 ChatGPT message: "This query retrieves properties that distinguish mixed cultural and natural heritage properties from purely cultural or natural heritage sites within the provided ontology. It does so by finding subclasses of MixedHeritage that are not also subclasses of either CulturalHeritage or NaturalHeritage"
 
 #CQ8
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
 
 SELECT ?naturalFeature
 WHERE {
@@ -123,10 +92,6 @@ WHERE {
 ChatGPT message: "This SPARQL query selects instances that are of type whc:NaturalFeature, which are the natural
 features considered as natural heritage according to the Convention."
 #CQ9
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
-
 SELECT ?monument
 WHERE {
   ?monument rdf:type whc:Monument .
@@ -136,9 +101,6 @@ ChatGPT message: "This SPARQL query selects instances that are of type whc:Monum
 
 
 #CQ10
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX whc: <http://example.org/WorldHeritageConvention#>
 
 SELECT ?landscape
 WHERE {
