@@ -1,3 +1,10 @@
+#CQ1
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX whc: <http://example.org/WorldHeritageConvention#>
+
+SELECT ?definition
+WHERE {  whc:CulturalHeritage rdfs:comment ?definition .}
 
 #CQ2
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -30,7 +37,7 @@ Message from ChatGPT: "This query retrieves the classification of geological and
 It first finds instances of geological and physiographical formations 
 and then checks their superclass to ensure they are classified within the natural heritage category"
 
-#CQ5
+#CQ4
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX whc: <http://example.org/WorldHeritageConvention#>
@@ -46,7 +53,7 @@ descriptions. It doesn't specifically filter for the three main types, assuming 
 If there are more than three subclasses and you need only the three main types, further refinement of the query would be necessary, 
 possibly using additional properties or patterns specific to the main types."
 
-#CQ6
+#CQ5
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX whc: <http://example.org/WorldHeritageConvention#>
