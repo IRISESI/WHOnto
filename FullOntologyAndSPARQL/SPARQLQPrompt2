@@ -2,7 +2,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX whc: <http://example.org/WorldHeritageConvention#>
-#CQ1
+#CQ1 --This is given to ChatGPT as the example for one-shot learning
 SELECT ?definition
 WHERE {  whc:CulturalHeritage rdfs:comment ?definition .}
 
