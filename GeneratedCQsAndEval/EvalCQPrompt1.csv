@@ -1,0 +1,21 @@
+﻿Q Number;Generated CQ;;;;;;;;;;"Evaluation (A: Accepted; D: Delayed; R: Rejected)";Remarks;;;
+1;Can you explain the main categories of World Heritage sites as defined by the UNESCO's World Heritage Convention?;;;;;;;;;;A;Fit within the scope of the ontology;;;
+2;What distinguishes cultural heritage sites from natural heritage sites within the classification system?;;;;;;;;;;A;Fit within the scope of the ontology;;;
+3;Provide examples of monuments and groups of buildings recognized as World Heritage sites.;;;;;;;;;;A;Fit within the scope of the ontology;;;
+4;How are cultural landscapes classified under the UNESCO's World Heritage Convention?;;;;;;;;;;A;Fit within the scope of the ontology;;;
+5;Describe the significance of intangible cultural heritage within the classification of World Heritage sites.;;;;;;;;;;R;"The ontology does not currently incorporate the classification "" intangible/tangible"" ";;;
+6;Can you differentiate between natural features and geological and physiographical formations in the context of natural heritage sites?;;;;;;;;;;D;Requires additional descriptive attributes;;;
+7;Give examples of natural sites recognized as World Heritage sites.;;;;;;;;;;A;Fit within the scope of the ontology;;;
+8;What are mixed heritage sites, and how do they differ from purely cultural or natural heritage sites?;;;;;;;;;;R;We reject this as it encompasses two questions. A for the first and R for the second.;;;
+9;Explain the importance of the 2023 operational guidelines for the implementation of the World Heritage Convention in refining the classification system.;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+10;How do associative cultural landscapes differ from other types of cultural landscapes?;;;;;;;;;;R;Complicated CQ;;;
+11;What criteria are used to determine whether a site qualifies as a World Heritage site under the UNESCO's World Heritage Convention?;;;;;;;;;;R;Not relevant to the scope of the ontology;;;(current scope)
+12;Describe the process involved in nominating a site for inclusion on the World Heritage List.;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+13;How are decisions made regarding the inscription or removal of sites from the World Heritage List?;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+14;Can you discuss any recent changes or updates to the classification system of World Heritage sites?;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+15;How does the classification of World Heritage sites contribute to the preservation and promotion of cultural diversity?;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+16;Explain the concept of outstanding universal value as it pertains to World Heritage sites.;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+17;Describe the role of international cooperation in the management and conservation of World Heritage sites.;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+18;Discuss the challenges associated with balancing conservation efforts and sustainable development at World Heritage sites.;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+19;How do World Heritage sites contribute to tourism, economic development, and local communities?;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
+20;Can you provide examples of World Heritage sites facing threats or challenges to their preservation?;;;;;;;;;;R;Not relevant to the scope of the ontology;;;
