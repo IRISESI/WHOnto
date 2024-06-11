@@ -14,4 +14,4 @@ Organization of the repository:
 2. Folder GeneratedTBox: it contains the generated TBox for each tested prompt (1&2). TBoxPrompt2Corrected is an edited version of 
     TBoxPrompt2 containing some corrections that we performed manually in Protégé.
 3. Forlder GeneratedABox: it contains the generated Abox for each tested prompt.
-4. Folder GeneratedCQsAndEval: the Competency Questions (CQs) generated per prompt are regrouped in separat files. The 
+4. Folder GeneratedCQsAndEval: the Competency Questions (CQs) generated per prompt are regrouped in the file PromptsAndResults. The evaluation of each prompt's results is detailed in a CSV file.
