@@ -2,7 +2,7 @@
 This repository contains the details (prompts and results) of  the experiments conducted for the construction of an ontology using ChatGPT-3.5. These experiments are part of the paper entitled "" submitted for publication in "".  
 
 Technical details: 
-1. We used ChatGPT-3.5, which is publicly available at https://chatgpt.com/. The experiments were performed in March-April 2024. At that time, GPT-3.5 was the default model, and GPT-4o had not yet been made available.
+1. We used ChatGPT-3.5, which is publicly available at https://chatgpt.com/. The experiments were performed in March-April 2024. At that time, GPT-3.5 was the default model, and GPT-4o had not yet been made available (see https://help.openai.com/en/articles/6825453-chatgpt-release-notes for more information).
 2. We used Protégé-5.5.0 to verify the generated ontologies and to test the SPARQL queries.
 
 Organization of the repository:
