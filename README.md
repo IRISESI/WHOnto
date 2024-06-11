@@ -7,5 +7,6 @@ Technical details:
 
 Organization of the repository:
 
-1. Folder FullOntologyAndSPARQL : this folder contains the ontology (TBox and ABox) for testing the SPARQL queries. The files "Prompts", SPARQLQPrompt1 and SPARQLPrompt2 details the used prompts, and the resulting SPARQL queries per prompt, respectively.
+1. Folder FullOntologyAndSPARQL : this folder contains the ontology (TBox and ABox) for testing the SPARQL queries. It results from opening the TBoxPrompt2Corrected in Protégé and then importing 
+ the ABoxPrompt2 into the active ontology.  This allows the reader to use the full ontology (TBox and ABox) without having to perform these operations personally. The files "Prompts", SPARQLQPrompt1 and SPARQLPrompt2 details the used prompts, and the resulting SPARQL queries per prompt, respectively.
 2. Folder GeneratedTBox: 
