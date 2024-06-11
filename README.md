@@ -7,6 +7,11 @@ Technical details:
 
 Organization of the repository:
 
-1. Folder FullOntologyAndSPARQL : it contains the ontology (TBox and ABox) for testing the SPARQL queries. The ontology is derived from opening the TBoxPrompt2Corrected in Protégé and then importing the ABoxPrompt2 into the active ontology. We provide this file to allow the reader to perform testing without having to carry out these operations personally. The files Prompts, SPARQLQPrompt1, and SPARQLPrompt2 detail the prompts used and the resulting SPARQL queries per prompt, respectively.
-2. Folder GeneratedTBox: it contains the generated TBox for each tested prompt.
+1. Folder FullOntologyAndSPARQL : it contains the ontology (TBox and ABox) for testing the SPARQL queries. The ontology is derived from 
+   opening the TBoxPrompt2Corrected in Protégé and then importing the ABoxPrompt2 into the active ontology. We provide this file to allow 
+   the reader to perform testing without having to carry out these operations personally. The files Prompts, SPARQLQPrompt1, and 
+   SPARQLPrompt2 detail the prompts used and the resulting SPARQL queries per prompt, respectively.
+2. Folder GeneratedTBox: it contains the generated TBox for each tested prompt (1&2). TBoxPrompt2Corrected is an edited version of 
+    TBoxPrompt2 containing some corrections that we performed manually in Protégé.
 3. Forlder GeneratedABox: it contains the generated Abox for each tested prompt.
+4. Folder GeneratedCQsAndEval: the Competency Questions (CQs) generated per prompt are regrouped in separat files. The 
