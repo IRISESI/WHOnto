@@ -1,0 +1,6 @@
+#Prompt1: Construct an OWL ontology based on the provided text. Represent the classes, establish hierarchy, and provide a definition for each class. Utilize for that 
+the following classification of World Heritage provided in the text delimited by triple quotes. """Original Text""" 
+
+
+#Prompt2: Construct an OWL ontology based on the provided text. Represent the classes, establish hierarchy, and provide a definition for each class. Utilize for that 
+the following classification of World Heritage provided in the text delimited by triple quotes. """Formatted text"""
