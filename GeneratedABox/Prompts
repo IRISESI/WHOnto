@@ -1,0 +1,8 @@
+#Prompt1: The World Heritage is classified into three categories: cultural, natural, and mixed. They are defined as follows: "Formatted Text". 
+Your task is to identify the category and the country of each of the given World Heritage 
+properties.  The list of World Heritage properties to classify is: Delos, Acropolis, Meteora, Medina of Fez, Town of Bamberg, Mount Taishan, Mount Athos, China Danxia, Manú National Park, 
+Messel Pit Fossil Site, Historic Sanctuary of Machu Picchu, Río Abiseo National Park.
+
+#Prompt2: The World Heritage is classified into three categories: cultural, natural, and mixed.
+They are defined as follows: "Formatted Text". Your task is to provide three examples of World Heritage properties for each category, organize them by category, 
+and list only their names without repeating the definitions of categories. 
