@@ -15,3 +15,4 @@ Organization of the repository:
     TBoxPrompt2 containing some corrections that we performed manually in Protégé.
 3. Forlder GeneratedABox: it contains the generated Abox for each tested prompt.
 4. Folder GeneratedCQsAndEval: the Competency Questions (CQs) generated per prompt are regrouped in the file PromptsAndResults. The evaluation of each prompt's results is detailed in a CSV file.
+5. Folder InputData: contains the original text of the UNESCO's convention and also the formatted version of this text.  This data is used for the generation of the TBox.
